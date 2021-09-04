@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
-/* *** CSS RESET *** */
 html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -14,49 +12,30 @@ html {
   box-sizing: border-box;
 }
 
-/* body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}  */
 
 /* COLORS */
 
-/* ### Primary
 
-- Red: hsl(0, 100%, 74%) 
-- Green: hsl(154, 59%, 51%)
+:root {
 
-### Accent
+  /* ### Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
 
-- Blue: hsl(248, 32%, 49%)
+  /* ### Accent */
 
-### Neutral
+  --blue: hsl(248, 32%, 49%);
 
-- Dark Blue: hsl(249, 10%, 26%) 
-- Grayish Blue: hsl(246, 25%, 77%) */
+  /* ### Neutral */
+
+  --darkblue: hsl(249, 10%, 26%);
+  --grayishblue: hsl(246, 25%, 77%);
+
+}
+
 body {
   background-image: url('images/bg-intro-mobile.png');
-  background-color: hsl(0, 100%, 74%);
+  background-color: var(--red);
   text-align: center;
 }
 
@@ -99,8 +78,8 @@ body {
 .btn-tryit {
   width: 90%;
   white-space: normal;
-  box-shadow: 0 8px 6px -6px hsl(249, 10%, 26%);
-  background-color: hsl(248, 32%, 49%);
+  box-shadow: 0 8px 6px -6px var(--darkblue);
+  background-color: var(--blue);
   color: white;
   font-weight: 400;
   margin-bottom: 5%;
@@ -112,8 +91,8 @@ body {
 }
 
 .btn-trial {
-  box-shadow: 0 8px 6px -6px hsl(154, 59%, 51%);
-  background-color: hsl(154, 59%, 51%);
+  box-shadow: 0 8px 6px -6px var(--green);
+  background-color: var(--green);
   text-transform: uppercase;
   margin-bottom: 3%;
   color: white;
@@ -130,7 +109,7 @@ body {
 
 .span-2 {
   font-weight: 700;
-  color: hsl(0, 100%, 74%);
+  color: var(--red);
 }
 
 .container {
@@ -139,19 +118,26 @@ body {
   border-radius: 10px;
   padding-top: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 6px -6px hsl(249, 10%, 26%);
+  box-shadow: 0 8px 6px -6px var(--darkblue);
+}
+
+input:focus {
+  border: 2px solid grey !important;
+  border-bottom: 1px solid black !important;
+  font-weight: 700;
 }
 
 .input-error {
   background-repeat: no-repeat;
   background-image: url(images/icon-error.svg);
   background-position: 95% center;
-  border: 2px solid red !important;
+  border: 2px solid var(--red) !important;
 }
+
 .text-error {
   font-size: 13px;
   text-align: right;
-  color: red;
+  color: var(--red);
   font-style: italic;
   font-weight: 600;
   margin-bottom: 0 !important;
@@ -181,7 +167,7 @@ body {
   }
 
   .text-muted {
-    font-size: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 

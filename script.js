@@ -6,7 +6,6 @@ $('form button[type="button"]').click(function() {
   
     if (firstname.val().length > 3) {
       firstname_error.addClass('d-none');
-      console.log('firstname OK');
     } else {
       firstname_error.removeClass('d-none');
       firstname.addClass('input-error');
@@ -19,7 +18,6 @@ $('form button[type="button"]').click(function() {
 
   if (lastname.val().length > 3) {
     lastname_error.addClass('d-none');
-    console.log('lastname ok');
   } else {
     lastname_error.removeClass('d-none');
     lastname.addClass('input-error');
@@ -30,7 +28,6 @@ $('form button[type="button"]').click(function() {
   var email = $('#email');
   var email_error = $('.email_error');
   if (email.val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) != null) {
-    console.log('Email Ok');
     email_error.addClass('d-none');
   } else {
     email_error.removeClass('d-none');
