@@ -143,6 +143,17 @@ input:focus {
   margin-bottom: 0 !important;
 }
 
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 1%;
+  width: 100%;
+  color: white;
+}
+.attribution a{
+  color: white;
+}
+
 @media (min-width: 768px) {
   .heading {
     padding: 10% 5% 0 5%;
@@ -172,7 +183,7 @@ input:focus {
 }
 
 @media (min-width: 992px) {
-  .flex-1 {
+  .flex-container {
     display: flex;
 
   }
